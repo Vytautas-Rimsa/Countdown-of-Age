@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+
+    <script>
+        window.onload=function(){
+            while(true){
+                var a =  prompt("Ivesk skaiciu nuo 1 iki 9: ", " ");
+                var b = a *2;
+                var c = b + 5;
+                var d = c * 50;
+                if (a==1||a==2||a==3||a==4||a==5||a==6||a==7||a==8||a==9){
+                    alert("Padauginus " + a + " is DVIEJU gauname: " + b);
+                    alert("Prie " + b + " pridejus PENKIS gauname: " + c);
+                    alert(c + " padauginus is PENKIASDESIMTIES gauname: " + d);
+                    break;
+                } else {
+                    alert("Duomenu ivedimo klaida");
+                    continue;
+                }
+            }
+                while(true){
+                var klausimas = prompt("Ar siemet jau sventei gimtadieni (taip/ne)?", "").toLowerCase();
+                var svente = d+1767;
+                var nesvente = d+1766;                        
+                if (klausimas == "taip"){
+                    while(true){
+                        var gimimoMetai = prompt("Iveskite savo gimimo metus: ", "");
+                        if (gimimoMetai > 1900 && gimimoMetai < 2018){
+                            alert("Kadangi siemet jau atsventete savo gimtadieni, tai prie " + d + " pridedame 1767 ir gauname: " + svente);
+                            var skirtumasSvente = svente-gimimoMetai;
+                            prompt("Is gauto skaiciaus: " + svente + " atimame irasytus gimimo metus - " + gimimoMetai + ". Gauname skaiciu: " + skirtumasSvente+"\n Pirmas skaicius - ivestas skaicius\n Like skaiciai - Jusu amzius");
+                            break;
+                        } else {
+                            alert("Duomenu ivedimo klaida");
+                            continue;
+                        }
+                    }
+                    break;                   
+                }
+                else if (klausimas == "ne"){
+                    while(true){
+                        var gimimoMetai = prompt("Iveskite savo gimimo metus: ", "");
+                        if (gimimoMetai > 1900 && gimimoMetai < 2018){
+                            alert("Kadangi siemet dar nesventei savo gimtadienio, tai prie " + d + " pridedame 1766 ir gauname: " + nesvente);
+                            var skirtumasNesvente = nesvente-gimimoMetai;
+                            prompt("Is gauto skaiciaus: " + nesvente + " atimame irasytus gimimo metus - " + gimimoMetai + ". Gauname skaiciu: " + skirtumasNesvente+"\n Pirmas skaicius - ivestas skaicius\n Like skaiciai - Jusu amzius");
+                            break;
+                        } else {
+                            alert("Duomenu ivedimo klaida");
+                            continue;
+                        }
+                    }
+                    break;
+                }else {
+                    alert("Duomenu ivedimo klaida");
+                    continue;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
